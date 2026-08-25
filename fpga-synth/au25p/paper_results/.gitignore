@@ -1,0 +1,12 @@
+.Xil/
+run/build/
+run/sim/
+run/xsim/
+run/console/
+*.dcp
+*.jou
+*.log
+*.pb
+*.wdb
+*.xpr
+

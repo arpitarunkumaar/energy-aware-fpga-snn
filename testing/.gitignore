@@ -1,0 +1,9 @@
+sim_build*/
+.pytest_cache/
+__pycache__/
+obj_dir/
+*.pyc
+.venv/
+results.xml
+*.result.xml
+*.vcd

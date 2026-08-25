@@ -1,0 +1,35 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Mon Aug  3 18:49:57 2026
+| Host         : ecetesla0 running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_drc -file /home/aakumaar/team-22-512-parallel/fpga-synth/au25p/single_neuron_e2e/run/reports/67mhz/post_route_drc.rpt
+| Design       : parallel512_weight_partition_ooc
+| Device       : xcau25p-ffvb676-2-e
+| Speed File   : -2
+| Design State : Partially Routed
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: parallel512_weight_partition_ooc
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

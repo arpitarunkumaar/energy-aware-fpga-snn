@@ -1,0 +1,226 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date             : Sat Aug 15 15:01:44 2026
+| Host             : ecetesla0 running 64-bit Ubuntu 24.04.4 LTS
+| Command          : report_power -verbose -file /home/aakumaar/team-22-au25p-folded-bram/fpga-synth/au25p/folded_bram/run/reports/lanes16_rb2_175mhz_signoff/post_route_power_saif.rpt
+| Design           : folded_bram_predictor
+| Device           : xcau25p-ffvb676-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+3.2 By Clock Domain
+3.3 By Resource Type
+3.3.1 Signals
+3.3.2 CLB Logic
+3.3.3 Block RAM
+
+1. Summary
+----------
+
++--------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+| Total On-Chip Power (W)  | 0.509                                                                                                                               |
+| Design Power Budget (W)  | Unspecified*                                                                                                                        |
+| Power Budget Margin (W)  | NA                                                                                                                                  |
+| Dynamic (W)              | 0.058                                                                                                                               |
+| Device Static (W)        | 0.451                                                                                                                               |
+| Effective TJA (C/W)      | 1.7                                                                                                                                 |
+| Max Ambient (C)          | 99.1                                                                                                                                |
+| Junction Temperature (C) | 25.9                                                                                                                                |
+| Confidence Level         | High                                                                                                                                |
+| Setting File             | ---                                                                                                                                 |
+| Simulation Activity File | /home/aakumaar/team-22-au25p-folded-bram/fpga-synth/au25p/folded_bram/power_saif/run/lanes16_rb2_175mhz_signoff/full_inference.saif |
+| Design Nets Matched      | 100%   (6576/6576)                                                                                                                  |
++--------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.006 |        3 |       --- |             --- |
+| CLB Logic      |     0.008 |     5480 |       --- |             --- |
+|   LUT as Logic |     0.007 |     2285 |    141000 |            1.62 |
+|   CARRY8       |    <0.001 |       85 |     27120 |            0.31 |
+|   Register     |    <0.001 |     2530 |    282000 |            0.90 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |      225 |    216960 |            0.10 |
+| Signals        |     0.016 |     5052 |       --- |             --- |
+| Block RAM      |     0.029 |     13.5 |       300 |            4.50 |
+| Static Power   |     0.451 |          |           |                 |
+| Total          |     0.509 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     0.205 |       0.067 |      0.138 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.035 |       0.000 |      0.035 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.004 |       0.002 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.129 |       0.000 |      0.129 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+--------+
+| User Input Data             | Confidence | Details                                        | Action |
++-----------------------------+------------+------------------------------------------------+--------+
+| Design implementation state | High       | Design is routed                               |        |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |        |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |        |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes |        |
+| Device models               | High       | Device models are Production                   |        |
+|                             |            |                                                |        |
+| Overall confidence level    | High       |                                                |        |
++-----------------------------+------------+------------------------------------------------+--------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |             5.7 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| folded_bram_predictor |     0.058 |
++-----------------------+-----------+
+
+
+3.2 By Clock Domain
+-------------------
+
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+| Name  | Power (W) | Frequency (MHz) | Buffer | Clock Buffer Enable (%) | Enable Signal | Bel Fanout | Sites    | Fanout/Site | Type |
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+| clk   |     0.006 |          175.01 | N/A    |                     N/A | N/A           |       2545 |      490 |        5.19 | N/A  |
+|   clk |     0.006 |          175.01 | N/A    |                     N/A | N/A           |       2545 |      490 |        5.19 | N/A  |
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+
+
+3.3 By Resource Type
+--------------------
+
+3.3.1 Signals
+-------------
+
++------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+| Name                   | Power (W) | Signal Rate (Mtr/s) | % High   | Fanout   | Slice Fanout | Clock | Logic Type |
++------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+| partial[1][10]_i_1_n_0 |    <0.001 |              173.88 |    49.90 |       25 |           11 | clk   | N/A        |
+| partial[1][9]_i_1_n_0  |    <0.001 |              173.88 |    49.89 |       25 |           10 | clk   | N/A        |
+| issue_fold_reg_n_0_[0] |    <0.001 |              173.85 |    49.67 |       19 |           15 | clk   | N/A        |
+| partial[1][12]_i_1_n_0 |    <0.001 |              173.68 |    49.83 |       25 |           13 | clk   | N/A        |
+| partial[1][1]_i_1_n_0  |    <0.001 |              173.01 |    49.85 |       25 |           10 | clk   | N/A        |
+| partial[1][7]_i_1_n_0  |    <0.001 |              173.88 |    49.90 |       25 |           11 | clk   | N/A        |
+| partial[1][14]_i_1_n_0 |    <0.001 |              171.41 |    49.74 |       25 |           13 | clk   | N/A        |
+| partial[1][5]_i_1_n_0  |    <0.001 |              173.88 |    49.86 |       25 |           13 | clk   | N/A        |
+| partial[1][8]_i_1_n_0  |    <0.001 |              173.88 |    49.87 |       25 |           10 | clk   | N/A        |
+| partial[1][2]_i_1_n_0  |    <0.001 |              173.80 |    49.88 |       25 |           12 | clk   | N/A        |
++------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+
+
+3.3.2 CLB Logic
+---------------
+
++------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| Name                   | Power (W) | Type   | Clock (MHz) | Clock Name | Signal Rate (Mtr/s) | % High   |
++------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| partial_reg[1][7]_i_2  |    <0.001 | CARRY8 |         N/A | Async      |              169.88 |    49.83 |
+| partial_reg[1][15]_i_2 |    <0.001 | CARRY8 |         N/A | Async      |              168.40 |    50.00 |
+| partial[1][7]_i_13     |    <0.001 | LUT    |         N/A | Async      |              173.16 |    49.77 |
+| partial_reg[1][15]_i_3 |    <0.001 | CARRY8 |         N/A | Async      |              165.61 |    50.46 |
+| partial_reg[1][7]_i_3  |    <0.001 | CARRY8 |         N/A | Async      |              165.82 |    49.51 |
+| result_count[0]_i_1    |    <0.001 | LUT    |         N/A | Async      |              173.90 |    50.07 |
+| partial[1][15]_i_44    |    <0.001 | LUT    |         N/A | Async      |              165.41 |    48.54 |
+| partial_reg[1][7]_i_46 |    <0.001 | CARRY8 |         N/A | Async      |              159.71 |    47.77 |
+| partial_reg[1][7]_i_12 |    <0.001 | CARRY8 |         N/A | Async      |              159.57 |    47.59 |
+| partial_reg[1][23]_i_2 |    <0.001 | CARRY8 |         N/A | Async      |              157.84 |    50.68 |
++------------------------+-----------+--------+-------------+------------+---------------------+----------+
+
+
+3.3.3 Block RAM
+---------------
+
++---------------------------------------+-----------+-----------+-------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+| Name                                  | Power (W) | Mode      | Signal Rate | Clock Name A | Clock A (MHz) | Enable Rate A (%) | Read Width A | Write Width A | Write Mode A | Write Rate A (%) | Clock Name B | Clock B (MHz) | Enable Rate B (%) | Read Width B | Write Width B | Write Mode B | Write Rate B (%) |
++---------------------------------------+-----------+-----------+-------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+| second_row_buffer.weight_rows_1_reg_2 |     0.003 | RAMB36SDP |       24.76 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            49.72 |
+| second_row_buffer.weight_rows_1_reg_1 |     0.003 | RAMB36SDP |       24.73 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            49.72 |
+| weight_rows_0_reg_2                   |     0.003 | RAMB36SDP |       24.65 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            50.28 |
+| weight_rows_0_reg_1                   |     0.003 | RAMB36SDP |       24.65 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            50.28 |
+| second_row_buffer.weight_rows_1_reg_0 |     0.003 | RAMB36SDP |       22.85 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            49.72 |
+| weight_rows_0_reg_0                   |     0.003 | RAMB36SDP |       22.77 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            50.28 |
+| second_row_buffer.weight_rows_1_reg_3 |     0.003 | RAMB36SDP |       18.78 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            49.72 |
+| weight_rows_0_reg_3                   |     0.003 | RAMB36SDP |       18.71 | clk          |        175.01 |             49.67 |           72 |             0 | READ_FIRST   |             0.00 | clk          |        175.01 |              3.97 |            0 |            72 | READ_FIRST   |            50.28 |
+| spike_mem_reg_2                       |     0.002 | RAMB36    |        5.16 | clk          |        175.01 |              0.19 |            4 |             4 | READ_FIRST   |             0.19 | clk          |        175.01 |             99.34 |            4 |             4 | WRITE_FIRST  |             0.00 |
+| spike_mem_reg_1                       |     0.002 | RAMB36    |        5.14 | clk          |        175.01 |              0.19 |            4 |             4 | READ_FIRST   |             0.19 | clk          |        175.01 |             99.34 |            4 |             4 | WRITE_FIRST  |             0.00 |
++---------------------------------------+-----------+-----------+-------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+--------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+
+

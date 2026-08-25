@@ -1,0 +1,16 @@
+Label: lanes64_rb2_125mhz
+Part: xcau25p-ffvb676-2-e
+Top: folded_bram_predictor
+LANES: 64
+ROW_BUFFERS: 2
+Weight stream width: 64
+Requested period (ns): 8.000
+Requested frequency (MHz): 125.0
+Clock uncertainty (ns): 0.200
+Post-route setup WNS (ns): 0.451
+Post-route hold WHS (ns): 0.014
+Post-route timing met: 1
+Local critical period (ns): 7.549
+Local routed Fmax estimate (MHz): 132.46787653993906
+External L1 bytes/image: 4194304
+Synaptic interactions/image: 52454400

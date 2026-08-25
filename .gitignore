@@ -1,0 +1,5 @@
+*.DS_Store
+*.vcd
+__pycache__
+**/sim_build*/
+**/obj_dir/

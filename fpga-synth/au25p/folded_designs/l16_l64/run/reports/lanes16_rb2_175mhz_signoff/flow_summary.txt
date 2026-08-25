@@ -1,0 +1,16 @@
+Label: lanes16_rb2_175mhz_signoff
+Part: xcau25p-ffvb676-2-e
+Top: folded_bram_predictor
+LANES: 16
+ROW_BUFFERS: 2
+Weight stream width: 64
+Requested period (ns): 5.714
+Requested frequency (MHz): 175.00875043752185
+Clock uncertainty (ns): 0.200
+Post-route setup WNS (ns): 0.075
+Post-route hold WHS (ns): 0.016
+Post-route timing met: 1
+Local critical period (ns): 5.639
+Local routed Fmax estimate (MHz): 177.33640716439083
+External L1 bytes/image: 4194304
+Synaptic interactions/image: 52454400

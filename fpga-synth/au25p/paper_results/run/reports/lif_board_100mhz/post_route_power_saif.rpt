@@ -1,0 +1,254 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date             : Wed Aug  5 02:11:15 2026
+| Host             : ecetesla0 running 64-bit Ubuntu 24.04.4 LTS
+| Command          : report_power -verbose -file /home/aakumaar/team-22-512-parallel/fpga-synth/au25p/single_neuron_e2e/run/reports/lif_board_100mhz/post_route_power_saif.rpt
+| Design           : lif_unit_board_top
+| Device           : xcau25p-ffvb676-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+3.2 By Clock Domain
+3.3 By Resource Type
+3.3.1 I/O
+3.3.2 Signals
+3.3.3 CLB Logic
+
+1. Summary
+----------
+
++--------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Total On-Chip Power (W)  | 0.456                                                                                                                          |
+| Design Power Budget (W)  | Unspecified*                                                                                                                   |
+| Power Budget Margin (W)  | NA                                                                                                                             |
+| Dynamic (W)              | 0.006                                                                                                                          |
+| Device Static (W)        | 0.450                                                                                                                          |
+| Effective TJA (C/W)      | 1.7                                                                                                                            |
+| Max Ambient (C)          | 99.2                                                                                                                           |
+| Junction Temperature (C) | 25.8                                                                                                                           |
+| Confidence Level         | High                                                                                                                           |
+| Setting File             | ---                                                                                                                            |
+| Simulation Activity File | /home/aakumaar/team-22-512-parallel/fpga-synth/au25p/single_neuron_e2e/run/activity/lif_board_100mhz/post_route_fully_fed.saif |
+| Design Nets Matched      | 92%   (349/380)                                                                                                                |
++--------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| CLB Logic      |     0.001 |      259 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      137 |    141000 |            0.10 |
+|   CARRY8       |    <0.001 |        8 |     27120 |            0.03 |
+|   Register     |    <0.001 |       64 |    282000 |            0.02 |
+|   Others       |     0.000 |        6 |       --- |             --- |
+| Signals        |     0.003 |      193 |       --- |             --- |
+| I/O            |    <0.001 |       33 |       280 |           11.79 |
+| Static Power   |     0.450 |          |           |                 |
+| Total          |     0.456 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     0.143 |       0.006 |      0.137 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.036 |       0.000 |      0.035 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.129 |       0.000 |      0.129 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+--------+
+| User Input Data             | Confidence | Details                                        | Action |
++-----------------------------+------------+------------------------------------------------+--------+
+| Design implementation state | High       | Design is routed                               |        |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |        |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |        |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes |        |
+| Device models               | High       | Device models are Production                   |        |
+|                             |            |                                                |        |
+| Overall confidence level    | High       |                                                |        |
++-----------------------------+------------+------------------------------------------------+--------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------+--------+-----------------+
+| Clock  | Domain | Constraint (ns) |
++--------+--------+-----------------+
+| clk_in | clk_in |            10.0 |
++--------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| lif_unit_board_top |     0.006 |
+|   u_lif            |     0.002 |
++--------------------+-----------+
+
+
+3.2 By Clock Domain
+-------------------
+
++------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+| Name                   | Power (W) | Frequency (MHz) | Buffer | Clock Buffer Enable (%) | Enable Signal | Bel Fanout | Sites    | Fanout/Site | Type   |
++------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+| clk_in                 |    <0.001 |          100.00 | N/A    |                     N/A | N/A           |         67 |       24 |        2.79 | N/A    |
+|   bufg_clk             |    <0.001 |          100.00 | BUFG   |                  100.00 | VCC_2         |         64 |       21 |        3.05 | Global |
+|   clk                  |    <0.001 |          100.00 | BUFG   |                  100.00 | VCC_2         |         64 |       21 |        3.05 | N/A    |
+|   clk_in               |     0.000 |          100.00 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
+|   clk_in_IBUF_inst/O   |    <0.001 |          100.00 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
+|   clk_in_IBUF_inst/OUT |     0.000 |          100.00 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
++------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+
+
+3.3 By Resource Type
+--------------------
+
+3.3.1 I/O
+---------
+
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+| Name                | Power (W) | I/O Type | I/O Standard | Drive Strength | Input Pins | Output Pins | Bidir Pins | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Input Term | Output Impedance | Clock Name | Clock (MHz) | Signal Rate (Mtr/s) | Data Rate | Output Enable (%) | Term Disable (%) | IBUF Disable (%) | Output Load (pF) | Vccint_io (W) | Vccaux_io (W) | Vccint (W) | Vcco On-chip  (W) | External Termination | Vcco   Off-chip   (W) |
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+| input_current       |    <0.001 | HP       | LVCMOS18     |            N/A |         28 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               32.54 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[0]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               98.81 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[10] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               68.18 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[3]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               62.75 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[13] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               59.78 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[4]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               55.83 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[12] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               54.35 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[7]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               53.85 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[8]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               51.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[1]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               49.90 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[6]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               46.94 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[11] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               39.53 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[14] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               34.09 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[9]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               32.11 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[5]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               31.62 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[2]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               27.17 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[15] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               21.74 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[16] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               15.32 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[17] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               12.85 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[26] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[25] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[23] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[24] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[27] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[22] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |               10.38 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[19] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                8.89 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[18] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                8.40 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[21] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                8.40 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   input_current[20] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                6.92 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+| spike               |    <0.001 | HD       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | clk_in     |      100.00 |               18.28 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |     <0.001 |            <0.001 | NONE                 |                 0.000 |
+| clk_in              |    <0.001 | HD       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |              200.00 | Clock     |              0.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |     <0.001 |            <0.001 | NONE                 |                 0.000 |
+| new_image           |    <0.001 | HD       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                7.91 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |     <0.001 |            <0.001 | NONE                 |                 0.000 |
+| enable              |    <0.001 | HD       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                0.05 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |     <0.001 |             0.000 | NONE                 |                 0.000 |
+| rst                 |    <0.001 | HD       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | clk_in     |      100.00 |                0.02 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |     <0.001 |             0.000 | NONE                 |                 0.000 |
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+
+
+3.3.2 Signals
+-------------
+
++-----------------------------------+-----------+---------------------+----------+----------+--------------+--------+------------+
+| Name                              | Power (W) | Signal Rate (Mtr/s) | % High   | Fanout   | Slice Fanout | Clock  | Logic Type |
++-----------------------------------+-----------+---------------------+----------+----------+--------------+--------+------------+
+| input_current_IBUF[0]_hold_fix_1  |    <0.001 |               98.81 |    49.41 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[0]_inst/O      |    <0.001 |               98.81 |    49.41 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[10]_hold_fix_1 |    <0.001 |               68.18 |    50.40 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[10]_inst/O     |    <0.001 |               68.18 |    50.40 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[3]_hold_fix_1  |    <0.001 |               62.75 |    49.41 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[13]_hold_fix_1 |    <0.001 |               59.78 |    49.90 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[7]_inst/O      |    <0.001 |               53.85 |    50.40 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[13]_inst/O     |    <0.001 |               59.78 |    49.90 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[4]_hold_fix_1  |    <0.001 |               55.83 |    48.67 |        1 |            1 | clk_in | N/A        |
+| input_current_IBUF[3]_inst/O      |    <0.001 |               62.75 |    49.41 |        1 |            1 | clk_in | N/A        |
++-----------------------------------+-----------+---------------------+----------+----------+--------------+--------+------------+
+
+
+3.3.3 CLB Logic
+---------------
+
++-------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| Name                                | Power (W) | Type   | Clock (MHz) | Clock Name | Signal Rate (Mtr/s) | % High   |
++-------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| u_lif/membrane_next__0_carry        |    <0.001 | CARRY8 |         N/A | Async      |               74.18 |    50.76 |
+| u_lif/membrane_next__0_carry__0     |    <0.001 | CARRY8 |         N/A | Async      |               78.62 |    47.89 |
+| u_lif/threshold_crossed0_carry_i_2  |    <0.001 | LUT    |         N/A | Async      |               65.44 |    77.04 |
+| u_lif/threshold_crossed0_carry_i_10 |    <0.001 | LUT    |         N/A | Async      |               65.44 |    22.96 |
+| u_lif/internal_value[7]_i_1         |    <0.001 | LUT    |         N/A | Async      |               59.76 |    33.13 |
+| u_lif/threshold_crossed0_carry_i_11 |    <0.001 | LUT    |         N/A | Async      |               67.44 |    27.43 |
+| u_lif/threshold_crossed0_carry_i_3  |    <0.001 | LUT    |         N/A | Async      |               67.44 |    72.57 |
+| u_lif/internal_value[4]_i_1         |    <0.001 | LUT    |         N/A | Async      |               55.39 |    27.96 |
+| u_lif/internal_value[12]_i_1        |    <0.001 | LUT    |         N/A | Async      |               53.85 |    33.56 |
+| u_lif/internal_value[1]_i_1         |    <0.001 | LUT    |         N/A | Async      |               55.29 |    34.03 |
++-------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+
+

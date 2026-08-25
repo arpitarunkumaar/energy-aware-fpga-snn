@@ -1,0 +1,15 @@
+Run label: 67mhz
+Part: xcau25p-ffvb676-2-e
+Top: parallel512_weight_partition_ooc (BLOCK_NEURONS=1, real row-0 weights)
+Flow: synth_design(OOC), opt_design, place_design, phys_opt_design, route_design
+Requested period (ns): 14.925
+Requested frequency (MHz): 67.00167504187604
+Clock uncertainty (ns): 0.200
+Assumed parent-shell clock source: BUFGCE_X0Y0
+Post-route setup WNS (ns): 12.015
+Post-route hold WHS (ns): 0.009
+Post-route timing met: 1
+Local critical-period estimate (period-WNS, ns): 2.91
+Local routed Fmax estimate (MHz): 343.64261168384877
+Paper-style peak GOPS at requested clock (4096 adds x 2 ops): 548.8777219430485
+Paper-style peak GOPS at local Fmax estimate: 2815.1202749140894

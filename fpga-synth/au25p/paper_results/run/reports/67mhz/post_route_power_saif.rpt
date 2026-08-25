@@ -1,0 +1,205 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date             : Tue Aug  4 01:28:29 2026
+| Host             : ecetesla0 running 64-bit Ubuntu 24.04.4 LTS
+| Command          : report_power -verbose -file /home/aakumaar/team-22-512-parallel/fpga-synth/au25p/single_neuron_e2e/run/reports/67mhz/post_route_power_saif.rpt
+| Design           : parallel512_weight_partition_ooc
+| Device           : xcau25p-ffvb676-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+3.2 By Clock Domain
+3.3 By Resource Type
+3.3.1 Signals
+3.3.2 CLB Logic
+
+1. Summary
+----------
+
++--------------------------+---------------------------------------------------------------------------------------------------------------------+
+| Total On-Chip Power (W)  | 1.332                                                                                                               |
+| Design Power Budget (W)  | Unspecified*                                                                                                        |
+| Power Budget Margin (W)  | NA                                                                                                                  |
+| Dynamic (W)              | 0.875                                                                                                               |
+| Device Static (W)        | 0.457                                                                                                               |
+| Effective TJA (C/W)      | 1.7                                                                                                                 |
+| Max Ambient (C)          | 97.7                                                                                                                |
+| Junction Temperature (C) | 27.3                                                                                                                |
+| Confidence Level         | High                                                                                                                |
+| Setting File             | ---                                                                                                                 |
+| Simulation Activity File | /home/aakumaar/team-22-512-parallel/fpga-synth/au25p/single_neuron_e2e/run/activity/67mhz/post_route_fully_fed.saif |
+| Design Nets Matched      | 100%   (192534/192534)                                                                                              |
++--------------------------+---------------------------------------------------------------------------------------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.125 |        3 |       --- |             --- |
+| CLB Logic      |     0.202 |   121229 |       --- |             --- |
+|   LUT as Logic |     0.125 |    38667 |    141000 |           27.42 |
+|   Register     |     0.044 |    69606 |    282000 |           24.68 |
+|   CARRY8       |     0.033 |    11169 |     27120 |           41.18 |
+|   Others       |     0.000 |       28 |       --- |             --- |
+| Signals        |     0.547 |    76133 |       --- |             --- |
+| Static Power   |     0.457 |          |           |                 |
+| Total          |     1.332 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     1.175 |       1.029 |      0.146 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.128 |       0.000 |      0.128 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+--------+
+| User Input Data             | Confidence | Details                                        | Action |
++-----------------------------+------------+------------------------------------------------+--------+
+| Design implementation state | High       | Design is routed                               |        |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |        |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |        |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes |        |
+| Device models               | High       | Device models are Production                   |        |
+|                             |            |                                                |        |
+| Overall confidence level    | High       |                                                |        |
++-----------------------------+------------+------------------------------------------------+--------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.8                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |            14.9 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------+-----------+
+| Name                             | Power (W) |
++----------------------------------+-----------+
+| parallel512_weight_partition_ooc |     0.875 |
+|   g_neuron[0].adder              |     0.874 |
++----------------------------------+-----------+
+
+
+3.2 By Clock Domain
+-------------------
+
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+| Name  | Power (W) | Frequency (MHz) | Buffer | Clock Buffer Enable (%) | Enable Signal | Bel Fanout | Sites    | Fanout/Site | Type |
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+| clk   |     0.125 |           67.00 | N/A    |                     N/A | N/A           |      69606 |    12018 |        5.79 | N/A  |
+|   clk |     0.125 |           67.00 | N/A    |                     N/A | N/A           |      69606 |    12018 |        5.79 | N/A  |
++-------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+------+
+
+
+3.3 By Resource Type
+--------------------
+
+3.3.1 Signals
+-------------
+
++----------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+| Name                                                           | Power (W) | Signal Rate (Mtr/s) | % High   | Fanout   | Slice Fanout | Clock | Logic Type |
++----------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+| g_neuron[0].adder/gate_mux[3700].stage0_reg_reg[3700]_2587[15] |    <0.001 |               30.18 |    64.47 |        6 |            2 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[3278].stage0_reg_reg[3278]_6497[15] |    <0.001 |               34.45 |    53.37 |        8 |            2 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[2942].stage0_reg_reg[2942]_117[15]  |    <0.001 |               33.46 |    50.88 |        4 |           20 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[1818].stage0_reg_reg[1818]_4369[15] |    <0.001 |               32.79 |    49.89 |        5 |           23 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[3200].stage0_reg_reg[3200]_6537[15] |    <0.001 |               32.43 |    64.00 |        6 |            2 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[3934].stage0_reg_reg[3934]_1222[15] |    <0.001 |               34.09 |    47.94 |       15 |           15 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[3156].stage0_reg_reg[3156]_7555[15] |    <0.001 |               32.76 |    45.96 |       14 |            2 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[2774].stage0_reg_reg[2774]_1382[15] |    <0.001 |               31.44 |    47.69 |        7 |           21 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[2448].stage0_reg_reg[2448]_3994[15] |    <0.001 |               35.44 |    50.68 |        5 |           21 | clk   | N/A        |
+| g_neuron[0].adder/gate_mux[3096].stage0_reg_reg[3096]_5989[15] |    <0.001 |               35.44 |    41.01 |        3 |           11 | clk   | N/A        |
++----------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+-------+------------+
+
+
+3.3.2 CLB Logic
+---------------
+
++-------------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| Name                                      | Power (W) | Type   | Clock (MHz) | Clock Name | Signal Rate (Mtr/s) | % High   |
++-------------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+| g_neuron[0].lif/membrane_next__0_carry__0 |    <0.001 | CARRY8 |         N/A | Async      |               51.24 |    44.14 |
+| g_neuron[0].lif/membrane_next__0_carry    |    <0.001 | CARRY8 |         N/A | Async      |               49.26 |    48.86 |
+| g_neuron[0].lif/refractory_counter[2]_i_1 |    <0.001 | LUT    |         N/A | Async      |               21.20 |    31.64 |
+| g_neuron[0].lif/lif_spikes[0]_INST_0_i_1  |    <0.001 | LUT    |         N/A | Async      |               21.17 |    16.98 |
+| g_neuron[0].lif/internal_value[14]_i_1    |    <0.001 | LUT    |         N/A | Async      |                6.44 |     1.24 |
+| g_neuron[0].lif/internal_value[7]_i_1     |    <0.001 | LUT    |         N/A | Async      |                7.30 |     1.98 |
+| g_neuron[0].lif/internal_value[4]_i_1     |    <0.001 | LUT    |         N/A | Async      |                7.27 |     1.95 |
+| g_neuron[0].lif/internal_value[10]_i_1    |    <0.001 | LUT    |         N/A | Async      |                8.10 |     1.98 |
+| g_neuron[0].lif/internal_value[12]_i_1    |    <0.001 | LUT    |         N/A | Async      |                7.09 |     2.45 |
+| g_neuron[0].lif/internal_value[3]_i_1     |    <0.001 | LUT    |         N/A | Async      |                8.12 |     2.45 |
++-------------------------------------------+-----------+--------+-------------+------------+---------------------+----------+
+
+

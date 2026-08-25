@@ -1,0 +1,21 @@
+Label: engines4_lanes16_160mhz_pipelined_fallback
+Part: xcau25p-ffvb676-2-e
+Top: folded_bram_predictor_parallel
+LANES: 16
+NUM_ENGINES: 4
+Weight stream width: 64
+Requested period (ns): 6.250
+Requested frequency (MHz): 160.0
+Clock uncertainty (ns): 0.200
+Post-route setup WNS (ns): 0.214
+Post-route hold WHS (ns): 0.018
+Post-route timing met: 1
+Local critical period (ns): 6.036
+Local routed Fmax estimate (MHz): 165.6726308813784
+LUT primitives: 6169
+FF primitives: 5364
+DSP primitives: 0
+Physical RAM primitives: 23
+Equivalent BRAM36 tiles: 21.5
+External L1 bytes/image: 4194304
+Synaptic interactions/image: 52454400

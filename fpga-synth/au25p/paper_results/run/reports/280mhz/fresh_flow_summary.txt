@@ -1,0 +1,15 @@
+Run label: 280mhz
+Part: xcau25p-ffvb676-2-e
+Top: parallel512_weight_partition_ooc (BLOCK_NEURONS=1, real row-0 weights)
+Flow: synth_design(OOC), opt_design, place_design, phys_opt_design, route_design
+Requested period (ns): 3.571
+Requested frequency (MHz): 280.0336040324839
+Clock uncertainty (ns): 0.200
+Assumed parent-shell clock source: BUFGCE_X0Y0
+Post-route setup WNS (ns): 0.971
+Post-route hold WHS (ns): 0.009
+Post-route timing met: 1
+Local critical-period estimate (period-WNS, ns): 2.6
+Local routed Fmax estimate (MHz): 384.6153846153846
+Paper-style peak GOPS at requested clock (4096 adds x 2 ops): 2294.035284234108
+Paper-style peak GOPS at local Fmax estimate: 3150.7692307692305

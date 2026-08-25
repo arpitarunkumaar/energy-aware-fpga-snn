@@ -1,0 +1,12 @@
+Run label: lif_board_100mhz
+Part: xcau25p-ffvb676-2-e
+Top: lif_unit_board_top (LIF + BUFG + registered I/O; NOT out_of_context)
+Requested period (ns): 10.0 (100.0 MHz)
+Clock uncertainty (ns): 0.200
+IOSTANDARD: LVCMOS18; input/output delay max 2.0 ns
+Post-route setup WNS (ns): 1.758
+Post-route hold WHS (ns): 0.011
+Post-route timing met: 1
+LUT primitives: 181
+FF primitives: 64
+BUFG primitives: 1

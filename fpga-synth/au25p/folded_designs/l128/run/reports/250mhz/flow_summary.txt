@@ -1,0 +1,16 @@
+Label: 250mhz
+Part: xcau25p-ffvb676-2-e
+Top: collision_predictor
+Architecture: L128 (8 x pipelined 16-input adders)
+Weight stream width: 128
+Requested period (ns): 4.000
+Requested frequency (MHz): 250.0
+Clock uncertainty (ns): 0.200
+Post-route setup WNS (ns): 0.082
+Post-route hold WHS (ns): 0.010
+Post-route timing met: 1
+Local critical period (ns): 3.918
+Local routed Fmax estimate (MHz): 255.23226135783563
+Measured ideal-stream cycles/inference: 415731
+Compute fold cycles/inference: 409800
+Synaptic interactions/inference: 52454400

@@ -1,0 +1,45 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Tue Aug 18 16:17:14 2026
+| Host         : ecetesla0 running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_drc -file /home/aakumaar/team-22/fpga-synth/au25p/l128/run/reports/250mhz/post_route_drc.rpt
+| Design       : collision_predictor
+| Device       : xcau25p-ffvb676-2-e
+| Speed File   : -2
+| Design State : Partially Routed
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: collision_predictor
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| RTSTAT-10 | Warning  | No routable loads | 1          |
++-----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-10#1 Warning
+No routable loads  
+62 net(s) have no routable loads. The problem bus(es) and/or net(s) are classification, hidden_spike, hidden_spike_neuron[8:0],
+hidden_spike_timestep[4:0], hidden_spike_valid, image_ready,
+inference_cycles[31:0], inference_valid, output_spike, output_spike_neuron,
+output_spike_timestep[4:0], output_spike_valid, row_request_valid
+spike_ready.
+Related violations: <none>
+
+
