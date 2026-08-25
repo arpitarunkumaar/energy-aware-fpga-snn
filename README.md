@@ -25,3 +25,7 @@ More detailed instructions for running various work are included in the followin
 | Functional tests (all designs) | [`testing/README.md`](testing/README.md) |
 | AU25P folded-design synthesis and power | [`fpga-synth/au25p/folded_designs/README.md`](fpga-synth/au25p/folded_designs/README.md) |
 | AU25P paper-result reproduction | [`fpga-synth/au25p/paper_results/README.md`](fpga-synth/au25p/paper_results/README.md) |
+
+## Credits
+
+Ali Oonwala, Braden Schulz, Grady Booth, and Sreya Roy Chowdhury.
